@@ -11,7 +11,7 @@ export default function Player() {
 
   return (
     <section id="player">
-      <h2>Welcome {userName ? userName : "unknown entity"}</h2>
+      <h2>Welcome {userName ?? "unknown entity"}</h2>
       <p>
         <input ref={currentUserName} type="text" />
         <button onClick={handleClick}>Set Name</button>
