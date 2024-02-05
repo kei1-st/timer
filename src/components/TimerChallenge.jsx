@@ -8,7 +8,7 @@ export default function TimerChallenge({ title, targetTime }) {
   const [timerExpired, setTimerExpired] = useState(false);
 
   function handleStart() {
-    timer.current = setTimeout(() => {
+    timer.current = setInterval(() => {
       setTimerExpired(true);
       dialog.current.open(); // dialog ref 経由で open() を呼び出す
     }, targetTime * 1000);
